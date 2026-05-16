@@ -1,0 +1,652 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --pink:#ffc8dd;
+  --light:#fff4f8;
+  --dark:#5a3555;
+  --accent:#ff8fab;
+}
+
+body{
+  min-height:100vh;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.15) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,0.15) 2px, transparent 2px),
+    var(--pink);
+
+  background-size:40px 40px;
+
+  font-family:'Nunito', sans-serif;
+  color:var(--dark);
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.pixel-label{
+  display:inline-block;
+
+  padding:12px 18px;
+
+  background:var(--light);
+
+  border:4px solid var(--dark);
+
+  box-shadow:6px 6px 0 var(--dark);
+
+  font-family:'Press Start 2P', cursive;
+  font-size:10px;
+
+  margin-bottom:30px;
+}
+
+h1{
+  font-family:'Press Start 2P', cursive;
+
+  font-size:clamp(2rem,6vw,4rem);
+
+  color:var(--accent);
+
+  text-shadow:4px 4px white;
+
+  margin-bottom:30px;
+}
+
+.subtitle{
+  font-size:1.2rem;
+}
+
+.recipe-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:30px;
+}
+
+.recipe-card{
+  background:var(--light);
+
+  border:4px solid var(--dark);
+
+  padding:30px;
+
+  text-align:center;
+
+  box-shadow:8px 8px 0 var(--dark);
+   background-color:rgb(240, 230, 178);
+
+  transition:0.2s;
+
+  text-decoration:none;
+  color:var(--dark);
+}
+
+.recipe-card:hover{
+  transform:translate(-5px,-5px);
+
+  box-shadow:13px 13px 0 var(--dark);
+}
+
+.recipe-card h2{
+  font-family:'Press Start 2P', cursive;
+
+  font-size:1rem;
+
+  margin-bottom:20px;
+
+  color:var(--accent);
+}
+
+.back-btn{
+  display:inline-block;
+
+  padding:14px 22px;
+
+  margin-bottom:40px;
+
+  background-color: rgb(253, 234, 129);
+
+  border:4px solid #5a3555;
+
+  box-shadow:6px 6px 0 #5a3555;
+
+  text-decoration:none;
+
+  color:#5a3555;
+
+  font-family:'Press Start 2P', cursive;
+
+  font-size:10px;
+
+  transition:0.2s;
+}
+
+.back-btn:hover{
+  transform:translate(-4px,-4px);
+  background-color: rgb(243, 220, 93);
+
+  box-shadow:10px 10px 0 #5a3555;
+}
+
+.recipe-hero{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:60px;
+
+  align-items:center;
+
+  margin-bottom:70px;
+}
+
+.recipe-image-card{
+  background: rgb(240, 230, 178);
+
+  border:5px solid #5a3555;
+
+  padding:40px;
+
+  text-align:center;
+
+  box-shadow:12px 12px 0 #5a3555;
+
+  position:relative;
+}
+
+.recipe-image{
+  margin-bottom:20px;
+
+  background:rgb(240, 230, 178);
+
+  padding:15px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.recipe-image img{
+  width:120px;
+
+  image-rendering: pixelated;
+
+  mix-blend-mode:multiply;
+}
+
+.recipe-card:hover .recipe-image img{
+  transform:
+  scale(1.08)
+  rotate(-3deg);
+}
+
+.big-food-image{
+  background:rgb(240, 230, 178);
+
+  padding:20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.big-food-image img{
+  width:260px;
+
+  image-rendering:pixelated;
+
+  mix-blend-mode:multiply;
+
+  filter:drop-shadow(8px 8px 0 #5a3555);
+
+  animation:bounce 3s infinite ease-in-out;
+}
+
+.big-food-image img:hover{
+  transform:
+  scale(1.05)
+  rotate(-4deg);
+}
+
+
+@keyframes bounce{
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-15px);
+  }
+}
+
+.mini-note{
+  margin-top:20px;
+
+  font-family:'Press Start 2P', cursive;
+
+  font-size:10px;
+
+  color:#ff8fab;
+}
+
+.recipe-label{
+  display:inline-block;
+
+  padding:12px 18px;
+
+  margin-bottom:25px;
+
+   background:#eadade;
+
+  border:4px solid #5a3555;
+
+  box-shadow:6px 6px 0 #5a3555;
+
+  font-family:'Press Start 2P', cursive;
+
+  font-size:10px;
+}
+
+.recipe-info h1{
+  margin-bottom:25px;
+}
+
+.cute-button{
+  margin-top:30px;
+
+  padding:18px 24px;
+
+  border:none;
+
+  background:#ff8fab;
+
+  color:white;
+
+  border:4px solid #5a3555;
+
+  box-shadow:7px 7px 0 #5a3555;
+
+  font-family:'Press Start 2P', cursive;
+
+  font-size:10px;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.cute-button:hover{
+  transform:translate(-4px,-4px);
+  background:#f87a9a;
+  box-shadow:11px 11px 0 #5a3555;
+}
+
+.recipe-layout{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:40px;
+}
+
+.cute-box{
+  background:rgb(236, 222, 148);
+
+  border:5px solid #5a3555;
+
+  padding:35px;
+
+  box-shadow:10px 10px 0 #5a3555;
+
+  position:relative;
+}
+
+.cute-box::before{
+  content:"";
+
+  position:absolute;
+
+  top:-10px;
+  left:-10px;
+
+  width:100%;
+  height:100%;
+
+  border:3px dashed #ff8fab;
+
+  z-index:-1;
+}
+
+.cute-box h2{
+  font-family:'Press Start 2P', cursive;
+
+  font-size:1.5rem;
+
+  color:#f3819d;
+
+  margin-bottom:30px;
+
+  text-shadow:3px 3px rgb(236, 222, 148);
+
+  line-height:1.6;
+}
+
+.cute-box ul,
+.cute-box ol{
+  padding-left:20px;
+
+  line-height:2.2;
+}
+
+/* .floating-decor span{
+  position:fixed;
+
+  font-size:24px;
+
+  animation:floaty 5s infinite ease-in-out;
+
+  opacity:0.8;
+}
+
+.floating-decor span:nth-child(1){
+  top:10%;
+  left:5%;
+}
+
+.floating-decor span:nth-child(2){
+  top:20%;
+  right:8%;
+}
+
+.floating-decor span:nth-child(3){
+  bottom:10%;
+  left:8%;
+}
+
+.floating-decor span:nth-child(4){
+  bottom:15%;
+  right:10%;
+}
+
+@keyframes floaty{
+  0%,100%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-15px);
+  }
+} */
+ 
+.bg-stars{
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:1;
+}
+
+.bg-star{
+  position:absolute;
+
+  width:40px;
+
+  opacity:0.5;
+
+  image-rendering:pixelated;
+
+  animation:floatStar 5s infinite ease-in-out;
+}
+
+/* Individual placements */
+
+.s1{
+  top:8%;
+  left:6%;
+}
+
+.s2{
+  top:18%;
+  right:10%;
+
+  width:55px;
+}
+
+.s3{
+  top:50%;
+  left:4%;
+
+  width:35px;
+}
+
+.s4{
+  bottom:12%;
+  right:8%;
+
+  width:50px;
+}
+
+.s5{
+  bottom:18%;
+  left:15%;
+
+  width:28px;
+}
+
+.s6{
+  top:70%;
+  right:18%;
+
+  width:38px;
+}
+
+.s7{
+  top:32%;
+  left:18%;
+
+  width:26px;
+}
+
+.s8{
+  top:38%;
+  right:22%;
+
+  width:42px;
+}
+
+.s9{
+  top:82%;
+  left:32%;
+
+  width:30px;
+}
+
+.s10{
+  top:12%;
+  left:42%;
+
+  width:22px;
+}
+
+.s11{
+  bottom:28%;
+  right:30%;
+
+  width:36px;
+}
+
+.s12{
+  bottom:8%;
+  left:45%;
+
+  width:48px;
+}
+
+.s13{
+  top:6%;
+  left:28%;
+
+  width:24px;
+}
+
+.s14{
+  top:24%;
+  left:58%;
+
+  width:34px;
+}
+
+.s15{
+  top:42%;
+  left:72%;
+
+  width:28px;
+}
+
+.s16{
+  top:66%;
+  left:12%;
+
+  width:46px;
+}
+
+.s17{
+  top:78%;
+  right:14%;
+
+  width:24px;
+}
+
+.s18{
+  bottom:24%;
+  left:58%;
+
+  width:32px;
+}
+
+
+@keyframes floatStar{
+
+  0%,100%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+}
+
+.recipe-stars{
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:1;
+}
+
+.recipe-star{
+  position:absolute;
+
+  image-rendering:pixelated;
+
+  opacity:0.22;
+
+  animation:slowFloat 7s infinite ease-in-out;
+}
+
+/* Star positions */
+
+.r1{
+  top:8%;
+  left:8%;
+
+  width:70px;
+}
+
+.r2{
+  top:12%;
+  right:10%;
+
+  width:95px;
+}
+
+.r3{
+  top:38%;
+  left:4%;
+
+  width:60px;
+}
+
+.r4{
+  top:48%;
+  right:6%;
+
+  width:80px;
+}
+
+.r5{
+  bottom:18%;
+  left:12%;
+
+  width:100px;
+}
+
+.r6{
+  bottom:8%;
+  right:18%;
+
+  width:70px;
+}
+
+.r7{
+  top:72%;
+  left:42%;
+
+  width:55px;
+}
+
+.r8{
+  top:22%;
+  left:48%;
+
+  width:85px;
+}
+
+@keyframes slowFloat{
+
+  0%,100%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+}
+
+.container{
+  position:relative;
+
+  z-index:2;
+}
