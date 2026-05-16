@@ -40,16 +40,8 @@ This project is inspired by:
 
 ## 🚀 Live Website
 
-Add your GitHub Pages link here after deployment:
-
 ```txt
-https://yourusername.github.io/pixel-cookbook/
+https://shreyashi-77.github.io/pixel-cookbook/
 ```
-
-## 📸 Preview
-
-You can later add screenshots here.
-
----
 
 Made with lots of pink pixels, cozy vibes, and strawberries 🍓
